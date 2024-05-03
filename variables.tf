@@ -6,17 +6,17 @@ variable "instance_name" {
 
 variable "region" {
   type        = string
-  description = "The GCP region String"
+  description = "The GCP region String of the VM instance"
   default     = "europe-west3-b"
 }
 
 variable "service_account" {
   default = null
   type = object({
-    email = gtring
+    email = string
     scope = set(string)
   })
-  description = "The service account to attach to the instance."
+  description = "The service account to attach to the instance. (not used, dunno what this is)"
 }
 
 variable "tags" {
@@ -25,14 +25,14 @@ variable "tags" {
   default     = ["test", "dev", "project"]
 }
 
-variable "labels" {
-  type        = map(string)
-  description = "The map of labels to attach to the instance"
-}
+# variable "labels" {
+#   type        = map(string)
+#   description = "The map of labels to attach to the instance"
+# }
 
 variable "machine_type" {
   type        = string
-  description = "The machine type to use for the instance"
+  description = "The machine type to use for the instance (small one : 4$ per month)"
   default     = "e2-micro"
 }
 

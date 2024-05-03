@@ -8,7 +8,6 @@ terraform {
 }
 
 provider "google" {
-  project      = "google-terraform-proj-329912"
-  region       = "europe-west3-b"
-  credietnials = ""
+  project = "nodemailer-393915"
+  region  = "europe-west3-b"
 }
